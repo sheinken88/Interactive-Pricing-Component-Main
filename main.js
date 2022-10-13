@@ -12,6 +12,8 @@ toggle.addEventListener("change", () => {
   } else {
     isYearly = false;
   }
+
+  updateValue();
 });
 
 function updateValue() {
@@ -24,5 +26,5 @@ function updateValue() {
 
 slider.addEventListener("input", () => {
   updateValue();
-  console.log(slider.value);
+  view.innerHTML = pageViews[slider.value];
 });
